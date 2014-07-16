@@ -1,0 +1,16 @@
+  [1m[36m (23.3ms)[0m  [1mCREATE DATABASE `blogoo_production` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[36m (0.4ms)[0m  [1mCREATE DATABASE `blogoo_production` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+Mysql2::Error: Can't create database 'blogoo_production'; database exists: CREATE DATABASE `blogoo_production` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (0.3ms)[0m  [1mCREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[36m (0.3ms)[0m  [1mCREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+Mysql2::Error: Can't create database 'blogoo_development'; database exists: CREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (0.3ms)[0m  [1mCREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+Mysql2::Error: Can't create database 'blogoo_development'; database exists: CREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (0.4ms)[0m  [1mCREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+Mysql2::Error: Can't create database 'blogoo_development'; database exists: CREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-16 15:03:20 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/nishizawa/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 96ms (Views: 64.2ms | ActiveRecord: 0.0ms)
