@@ -6,7 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="background-color:#eee">
+
+<%= link_to image_tag('snow.jpg', :size => '500x300'), '/' %>
 
 <%= yield %>
 
