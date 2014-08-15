@@ -14042,3 +14042,104 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 17:34:18
 
 
 Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-08-12 17:34:18 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 17:37:23 +0900
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/home/nishizawa/projects/blogoo/app/views/posts/index.html.erb:18: syntax error, unexpected '<'
+...ath );@output_buffer.append=( <br> );@output_buffer.safe_app...
+...                               ^
+/home/nishizawa/projects/blogoo/app/views/posts/index.html.erb:18: syntax error, unexpected '<'
+...reeze;@output_buffer.append=( <br> );@output_buffer.append=(...
+...                               ^
+/home/nishizawa/projects/blogoo/app/views/posts/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+/home/nishizawa/projects/blogoo/app/views/posts/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/posts/index.html.erb:18: syntax error, unexpected '<'
+  app/views/posts/index.html.erb:18: syntax error, unexpected '<'
+  app/views/posts/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/posts/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/nishizawa/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/nishizawa/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/nishizawa/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/nishizawa/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-08-12 17:37:45 +0900
+
+
+Started GET "/posts/19" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  `posts`.* FROM `posts`  WHERE `posts`.`id` = 19 LIMIT 1
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-08-12 17:37:48 +0900
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-08-12 17:37:51 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms)
