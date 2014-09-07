@@ -14143,3 +14143,936 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
   Rendered posts/index.html.erb within layouts/application (4.5ms)
 Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 17:16:19 +0900
+
+ActiveRecord::NoDatabaseError (Unknown database 'blogoo_development'Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `rescue in mysql2_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:10:in `mysql2_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.4) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.7ms)
+  [1m[36m (1.8ms)[0m  [1mCREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (11.6ms)[0m  CREATE TABLE `posts` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (9.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (32.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (4.9ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140716064259')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+Mysql2::Error: Can't create database 'blogoo_development'; database exists: CREATE DATABASE `blogoo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 17:17:16 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 307ms (Views: 290.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 17:17:17 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 17:17:17 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:17 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:17 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:17 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:17 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:17 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:17 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 17:17:17 +0900
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 17:17:19 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-09-07 17:17:21 +0900
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (337.3ms)
+  Rendered posts/new.html.erb within layouts/application (344.9ms)
+Completed 200 OK in 360ms (Views: 355.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MPju2PlC8VMS/V2r9OZk8V2fLjZwYAz6zgSnVHcb0RI=", "post"=>{"title"=>"aaaaaa", "content"=>"aaaaa"}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `posts` (`content`, `created_at`, `title`, `updated_at`) VALUES ('aaaaa', '2014-09-07 08:17:25', 'aaaaaa', '2014-09-07 08:17:25')[0m
+  [1m[35m (7.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 13ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:25 +0900
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-09-07 17:17:28 +0900
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (3.6ms)
+  Rendered posts/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MPju2PlC8VMS/V2r9OZk8V2fLjZwYAz6zgSnVHcb0RI=", "post"=>{"title"=>"aaaaaa", "content"=>"aaaaa"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `posts` (`content`, `created_at`, `title`, `updated_at`) VALUES ('aaaaa', '2014-09-07 08:17:31', 'aaaaaa', '2014-09-07 08:17:31')[0m
+  [1m[35m (15.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 22ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 17:17:31 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 17:17:36 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2014-09-07 17:30:59 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  `posts`.* FROM `posts`  WHERE `posts`.`id` = 2 LIMIT 1[0m
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 17:30:59 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 17:30:59 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 17:30:59 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 17:30:59 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 17:30:59 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 17:30:59 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 17:30:59 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 17:30:59 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 17:31:06 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 18:33:19 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 18:33:19 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 18:33:50 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 18:34:06 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 18:34:07 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  `posts`.* FROM `posts`  WHERE `posts`.`id` = 2 LIMIT 1
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 18:34:12 +0900
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 18:48:26 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 18:48:30 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-09-07 18:48:47 +0900
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.2ms)
+  Rendered posts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 18:48:47 +0900
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MPju2PlC8VMS/V2r9OZk8V2fLjZwYAz6zgSnVHcb0RI=", "post"=>{"title"=>"ブログ案の構想", "content"=>"さて、ブログ案の構想をどうするか。全体的なデザインを整えることはまずやりましょうか。\r\nあとは、細かい日本語化。\r\nちゃんとユーザーを入れようかな。誰が投稿したかわかるようにする。"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `posts` (`content`, `created_at`, `title`, `updated_at`) VALUES ('さて、ブログ案の構想をどうするか。全体的なデザインを整えることはまずやりましょうか。\r\nあとは、細かい日本語化。\r\nちゃんとユーザーを入れようかな。誰が投稿したかわかるようにする。', '2014-09-07 09:50:13', 'ブログ案の構想', '2014-09-07 09:50:13')
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 11ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 18:50:13 +0900
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  `posts`.* FROM `posts`  WHERE `posts`.`id` = 3 LIMIT 1[0m
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 18:50:18 +0900
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 18:55:30 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-09-07 18:55:32 +0900
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.7ms)
+  Rendered posts/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MPju2PlC8VMS/V2r9OZk8V2fLjZwYAz6zgSnVHcb0RI=", "post"=>{"title"=>"サイトの構想", "content"=>"総合的なサイトを作ってみよう。\r\nそれで、ブログってのはそのうちの昨日の一つ。いわゆるホームページというやつですね。\r\nんで、フロントページがあって、そこからいろんなアプリに派生しているという形式にしよう。"}, "commit"=>"Create Post"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `posts` (`content`, `created_at`, `title`, `updated_at`) VALUES ('総合的なサイトを作ってみよう。\r\nそれで、ブログってのはそのうちの昨日の一つ。いわゆるホームページというやつですね。\r\nんで、フロントページがあって、そこからいろんなアプリに派生しているという形式にしよう。', '2014-09-07 09:56:34', 'サイトの構想', '2014-09-07 09:56:34')
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 13ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 18:56:34 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 18:56:35 +0900
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-09-07 18:56:41 +0900
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (1.4ms)
+  Rendered posts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MPju2PlC8VMS/V2r9OZk8V2fLjZwYAz6zgSnVHcb0RI=", "post"=>{"title"=>"新しいサイト案として", "content"=>"ブログも、自分（サイト管理人のブログ）と、みんなで投稿できるタイプのブログ。\r\nショッピングカート\r\n株式のデータ取得\r\nデータ記録アプリ\r\nなどなど\r\nいろんなのを組み合わせていったらいいんちゃうん？\r\nまずはいけてるフロントページ作ってみようかね。"}, "commit"=>"Create Post"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `posts` (`content`, `created_at`, `title`, `updated_at`) VALUES ('ブログも、自分（サイト管理人のブログ）と、みんなで投稿できるタイプのブログ。\r\nショッピングカート\r\n株式のデータ取得\r\nデータ記録アプリ\r\nなどなど\r\nいろんなのを組み合わせていったらいいんちゃうん？\r\nまずはいけてるフロントページ作ってみようかね。', '2014-09-07 09:59:07', '新しいサイト案として', '2014-09-07 09:59:07')
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 12ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 18:59:07 +0900
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2014-09-07 18:59:10 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  `posts`.* FROM `posts`  WHERE `posts`.`id` = 5 LIMIT 1[0m
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 20:58:03 +0900
+
+ArgumentError (Invalid route name, already in use: 'post' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  config/routes.rb:12:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (5.4ms)
+  Rendered posts/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 20:58:19 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 21:01:27 +0900
+
+ActionController::RoutingError (uninitialized constant TopController):
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.5ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-09-07 21:01:36 +0900
+
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-07 21:02:36 +0900
+
+ActionController::RoutingError (uninitialized constant TopController):
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/shingo/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/shingo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.0ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-09-07 21:02:43 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 21ms (Views: 14.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 21:02:44 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 21:02:44 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 21:02:44 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 21:02:44 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 21:02:44 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 21:02:44 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 21:02:44 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 21:02:44 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 21:02:44 +0900
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2014-09-07 21:03:02 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  `posts`.* FROM `posts`  WHERE `posts`.`id` = 5 LIMIT 1[0m
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 21:03:03 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 21:03:05 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 21:03:06 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts`   ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 21:04:06 +0900
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts`   ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
+
+
+Started GET "/assets/snow.jpg" for 127.0.0.1 at 2014-09-07 21:04:53 +0900
