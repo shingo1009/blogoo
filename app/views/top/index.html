@@ -1,0 +1,191 @@
+<h1>Blogoo<h1>
+
+<%= "コンテンツ" %>
+
+<%= link_to '掲示板', # %>
+<%= link_to 'blog', :posts %>
+<%= link_to 'stack chart', # %>
+<%= link_to 'ショッピングゲーム' %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('#slide').slideshow({
+        autoSlide    : true,
+        type         : 'repeat',
+        interval     : 3000,
+        duration     : 500,
+        easing       : 'swing',
+        imgHoverStop : true,
+        navHoverStop : true,
+        eleClone     : 2,
+        prevPosition : 0,
+        nextPosition : 0
+    });
+    $('.slidePrev img').rollover();
+    $('.slideNext img').rollover();
+    $(window).load(function() {
+         $('.topNaviCon').uniformHeight();
+    });
+});
+</script>
+<title>あなたのサイト名などお書きください</title>
+</head>
+
+<body>
+<div id="container">
+    <div id="header">
+        <h1><a href="index.html"><img src="images/logo.png" alt="SAMPLE WEB SITE" /></a></h1>
+        <div id="menu">
+            <ul>
+                <li class="home active"><a href="index.html">ホーム</a></li>
+                <li><a href="sample.html">ご予約</a></li>
+                <li><a href="sample.html">メニュー</a></li>
+                <li><a href="index.html">スタッフ</a></li>
+                <li><a href="index.html">ブログ</a></li>
+            </ul>
+        </div><!-- /#menu -->
+    </div><!-- /#header -->
+    <div id="slide">
+        <ul class="slideInner">
+            <li><a href="index.html"><img src="images/icatch01.jpg" width="940" height="300" alt="" /></a></li>
+            <li><a href="index.html"><img src="images/icatch02.jpg" width="940" height="300" alt="" /></a></li>
+            <li><a href="index.html"><img src="images/icatch03.jpg" width="940" height="300" alt="" /></a></li>
+        </ul>
+        <div class="slidePrev"><img src="images/nav_prev.png" alt="前へ" title="" /></div>
+        <div class="slideNext"><img src="images/nav_next.png" alt="次へ" title="" /></div>
+        <div class="controlNav"></div>
+    </div><!--/slide-->
+    <div id="contents">
+       <div class="topNavi">
+            <div class="topNaviColumn">
+                <h2>メニュー</h2>
+                <div class="topNaviCon">
+                    <div class="topNaviPhoto"><img src="images/photo01.jpg" alt="" /></div>
+                    <p>あいうえおかきくけこさしすせそたちつてとなにぬねの。</p>
+                    <p class="topNaviDetail"><a href="index.html">詳しくはこちら</a></p>
+                </div><!-- /.topNaviCon -->
+            </div><!-- /.topNaviColumn -->
+            <div class="topNaviColumn">
+                <h2>スタッフ</h2>
+                <div class="topNaviCon">
+                    <div class="topNaviPhoto"><img src="images/photo02.jpg" alt="" /></div>
+                    <p>あいうえおかきくけこさしすせそたちつてとなにぬねの。</p>
+                    <p class="topNaviDetail"><a href="index.html">詳しくはこちら</a></p>
+                </div><!-- /.topNaviCon -->
+            </div><!-- /.topNaviColumn -->
+            <div class="topNaviColumn">
+                <h2>ブログ</h2>
+                <div class="topNaviCon">
+                    <div class="topNaviPhoto"><img src="images/photo03.jpg" alt="" /></div>
+                    <p>左右のコンテンツでテキスト量が異なっても、下の｢詳しくはこちら｣が揃うようになっています。</p>
+                    <p class="topNaviDetail"><a href="index.html">詳しくはこちら</a></p>
+                </div><!-- /.topNaviCon -->
+            </div><!-- /.topNaviColumn -->
+        </div><!-- /.topNavi -->
+        <div id="conR">
+            <div class="information">
+                <h3>INFORMATION</h3>
+                <dl>
+                    <dt>2013-08-04</dt>
+                    <dd><a href="sample.html">2012年（平成24年）度の採用情報</a>を更新しました。</dd>
+                    <dt>2013-08-03</dt>
+                    <dd><a href="sample.html">制作実績のページ</a>を更新しました。</dd>
+                    <dt>2013-08-02</dt>
+                    <dd><a href="sample.html">2012年（平成24年）度の採用情報</a>を更新しました。</dd>
+                    <dt>2013-08-01</dt>
+                    <dd><a href="sample.html">制作実績のページ</a>を更新しました。</dd>
+                </dl>
+            </div><!-- /.information -->
+            <h3>メニュー</h3>
+            <h4>カット</h4>
+            <ul>
+                <li><a href="index.html">シャンプーなし</a></li>
+                <li><a href="index.html">シャンプー・ブロー付き</a></li>
+                <li><a href="index.html">前髪カット</a></li>
+            </ul>
+            <h4>カラー</h4>
+            <ul>
+                <li><a href="index.html">カラーリング</a></li>
+                <li><a href="index.html">ポイントカラー</a></li>
+                <li><a href="index.html">白髪染め</a></li>
+            </ul>
+            <h4>パーマ</h4>
+            <ul>
+                <li><a href="index.html">デジタルパーマ</a></li>
+                <li><a href="index.html">ストレートパーマ</a></li>
+                 <li><a href="index.html">縮毛矯正</a></li>
+           </ul>
+            <div class="box">
+                <h4>パーマ</h4>
+                <img src="images/photo04.jpg" alt="" />
+                <p class="first">あいうえおかきくけこさしすせそたちつてとなにぬねの。</p>
+            </div><!-- /.box -->
+            <div class="bnrL">
+                <ul>
+                    <li><a href="index.html"><img src="images/bnr_l.jpg" alt="" /></a></li>
+                    <li><a href="index.html"><img src="images/bnr_l.jpg" alt="" /></a></li>
+                    <li><a href="index.html"><img src="images/bnr_l.jpg" alt="" /></a></li>
+                </ul>
+            </div><!-- /.bnrL -->
+        </div><!-- /.conR -->
+        <div id="conL">
+            <div class="submenu">
+            <h3>メニュー</h3>
+                <h4>カット</h4>
+                <ul>
+                    <li><a href="index.html">シャンプーなし</a></li>
+                    <li><a href="index.html">シャンプー・ブロー付き</a></li>
+                    <li><a href="index.html">前髪カット</a></li>
+                </ul>
+                <h4>カラー</h4>
+                <ul>
+                    <li><a href="index.html">カラーリング</a></li>
+                    <li><a href="index.html">ポイントカラー</a></li>
+                    <li><a href="index.html">白髪染め</a></li>
+                </ul>
+                <h4>パーマ</h4>
+                <ul>
+                    <li><a href="index.html">デジタルパーマ</a></li>
+                    <li><a href="index.html">ストレートパーマ</a></li>
+                     <li><a href="index.html">縮毛矯正</a></li>
+               </ul>
+            </div><!-- /.submenu -->
+            <div class="bnrR">
+                <ul>
+                    <li><a href="index.html"><img src="images/bnr_r.jpg" alt="" /></a></li>
+                    <li><a href="index.html"><img src="images/bnr_r.jpg" alt="" /></a></li>
+                </ul>
+            </div><!-- /.bnrR -->
+        </div><!-- /.conL -->
+    </div><!-- /#contents -->
+    <div id="footMenu">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="sample.html">ご予約</a></li>
+            <li><a href="sample.html">メニュー</a></li>
+            <li><a href="index.html">スタッフ</a></li>
+            <li><a href="index.html">ブログ</a></li>
+        </ul>
+    </div><!-- /#footerMenu -->
+    <div id="footer">
+        <div class="copyright">Copyright &copy; 2014 YOUR SITE NAME All Rights Reserved.</div>
+    </div><!-- /#footer -->
+</div><!-- /#container -->
+<div id="pageTop">
+    <a href="#">Page Top</a>
+</div><!-- /#pageTop -->
+</body> "
+
+</html>
